@@ -5,6 +5,7 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\NilaikuliahController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -53,9 +54,18 @@ Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
 
+//data pegawai
 Route::get('/pegawai', [PegawaiDBController::class, 'index'])->name('route.menu');
 Route::get('/pegawai/tambah', [PegawaiDBController::class, 'tambah']);
 Route::post('/pegawai/store', [PegawaiDBController::class, 'store']);
 Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
+
+//nilai kuliah
+Route::get('/nilaisiswa', [NilaikuliahController::class, 'index'])->name('nilaisiswa.menu');
+Route::get('/nilaisiswa/tambah', [NilaikuliahController::class, 'tambah']);
+Route::post('/nilaisiswa/store', [NilaikuliahController::class, 'store']);
+Route::get('/nilaisiswa/edit/{id}', [NilaikuliahController::class, 'edit']);
+Route::post('/nilaisiswa/update', [NilaikuliahController::class, 'update']);
+Route::get('/nilaisiswa/hapus/{id}', [NilaikuliahController::class, 'hapus']);
