@@ -94,12 +94,14 @@
                                         </div>
 
                                         <div class="pt-3 sm:pt-5 lg:pt-0">
-                                            <h2 class="text-xl font-semibold text-black dark:text-white"> Azizah Alhasna Ramadhani</h2>
+                                            <h2 class="text-xl font-semibold text-black dark:text-white">Azizah Alhasna Ramadhani</h2>
 
                                             <p class="mt-4 text-sm/relaxed">
-                                                <?php
-                                                echo "Hari ini tanggal " . date("d/m/Y") . "<br>";
-                                                echo "The time is " . date("H:i:s") . "<br>";
+                                              <?php
+                                                    // System.out.println('');
+
+                                                    echo "Hari ini tanggal " . date("d/m/Y") . "<br>";
+                                                    echo "The time is " . date("H:i:s") . "<br>";
                                                 ?>
                                             </p>
                                         </div>
@@ -167,13 +169,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="p-4 mt-4">
-
-                            <h1>
-                                <a href="{{ route('route.menu') }}" class="btn btn-primary">menu</a>
-                            </h1>
-                        </div>
-                        </main>
+                    </main>
 
                     <footer class="py-16 text-center text-sm text-black dark:text-white/70">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
