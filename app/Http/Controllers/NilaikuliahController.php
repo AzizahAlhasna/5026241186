@@ -44,8 +44,6 @@ class NilaiKuliahController extends Controller
             'NRP' => $request->NRP,
             'NilaiAngka' => $nilaiAngka,
             'SKS' => $sks,
-            'NilaiHuruf' => $nilaiHuruf,
-            'Bobot' => $bobot
         ]);
 
         return redirect('/nilaikuliah');

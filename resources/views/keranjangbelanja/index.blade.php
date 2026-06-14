@@ -34,7 +34,6 @@
                 <td>Rp {{ number_format($row->Jumlah * $row->Harga, 0, ',', '.') }}</td>
 
                 <td>
-
                     <form action="{{ route('keranjangbelanja.destroy', $row->ID) }}" method="POST" style="display:inline;"
                         onsubmit="return confirm('Yakin ingin membatalkan pembelian ini?')">
                         @csrf
