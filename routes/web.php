@@ -7,7 +7,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\SepedamotorController;
-use App\Http\Controllers\Latihan1Controller;
+use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\NilaiKuliahController;
 
 
@@ -79,10 +79,10 @@ Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.upda
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
 
 // latihan 1
-// Route::get('/latihan1', [Latihan1Controller::class, 'index'])->name('latihan1.index');
-// Route::get('/latihan1/beli', [Latihan1Controller::class, 'create'])->name('latihan1.create');
-// Route::post('/latihan1', [Latihan1Controller::class, 'store'])->name('latihan1.store');
-// Route::delete('/latihan1/{id}', [Latihan1Controller::class, 'destroy'])->name('latihan1.destroy');
+Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'index'])->name('keranjangbelanja.index');
+Route::get('/keranjangbelanja/beli', [KeranjangBelanjaController::class, 'create'])->name('keranjangbelanja.create');
+Route::post('/keranjangbelanja', [KeranjangBelanjaController::class, 'store'])->name('keranjangbelanja.store');
+Route::delete('/keranjangbelanja/{id}', [KeranjangBelanjaController::class, 'destroy'])->name('keranjangbelanja.destroy');
 
 // latihan 2 - route Nilai Kuliah
 Route::get('/nilaikuliah', [NilaiKuliahController::class, 'indexnilaikuliah'])->name('nilaikuliah.indexnilaikuliah');
