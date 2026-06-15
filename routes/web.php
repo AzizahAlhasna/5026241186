@@ -10,6 +10,7 @@ use App\Http\Controllers\SepedamotorController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\NilaiKuliahController;
 use App\Http\Controllers\VGAController;
+use App\Http\Controllers\tagihan_airController;
 
 
 Route::get('/', function () {
@@ -96,3 +97,9 @@ Route::get('/vga', [VGAController::class, 'index'])->name('vga.indexvga');
 Route::get('/vga/create', [VGAController::class, 'create'])->name('vga.create');
 Route::post('/vga', [VGAController::class, 'store'])->name('vga.store');
 Route::delete('/vga/{id}', [VGAController::class, 'destroy'])->name('vga.destroy');
+
+//EASSSSSS
+Route::get('/eas', [tagihan_airController::class, 'index'])->name('tagihan_air.index');
+Route::get('/tagihan_air/create', [tagihan_airController::class, 'create'])->name('tagihan_air.create');
+Route::post('/tagihan_air', [tagihan_airController::class, 'store'])->name('tagihan_air.store');
+Route::delete('/tagihan_air/{id}', [tagihan_airController::class, 'destroy'])->name('tagihan_air.destroy');
